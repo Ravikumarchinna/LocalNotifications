@@ -20,6 +20,10 @@
 		DB8367CC27CE916500BA3561 /* UNService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8367CB27CE916500BA3561 /* UNService.swift */; };
 		DB8367F427CF9DBC00BA3561 /* AlertService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8367F327CF9DBC00BA3561 /* AlertService.swift */; };
 		DB8367F927D118CE00BA3561 /* CLService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8367F827D118CE00BA3561 /* CLService.swift */; };
+		DB83681627D12FAC00BA3561 /* NotificationAttachmentID.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB83681527D12FAC00BA3561 /* NotificationAttachmentID.swift */; };
+		DB83681D27D1323D00BA3561 /* Calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = DB83681A27D1323D00BA3561 /* Calendar.png */; };
+		DB83681E27D1323D00BA3561 /* location.png in Resources */ = {isa = PBXBuildFile; fileRef = DB83681B27D1323D00BA3561 /* location.png */; };
+		DB83681F27D1323D00BA3561 /* timer.png in Resources */ = {isa = PBXBuildFile; fileRef = DB83681C27D1323D00BA3561 /* timer.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		DB8367CB27CE916500BA3561 /* UNService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UNService.swift; sourceTree = "<group>"; };
 		DB8367F327CF9DBC00BA3561 /* AlertService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertService.swift; sourceTree = "<group>"; };
 		DB8367F827D118CE00BA3561 /* CLService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLService.swift; sourceTree = "<group>"; };
+		DB83681527D12FAC00BA3561 /* NotificationAttachmentID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationAttachmentID.swift; sourceTree = "<group>"; };
+		DB83681A27D1323D00BA3561 /* Calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Calendar.png; sourceTree = "<group>"; };
+		DB83681B27D1323D00BA3561 /* location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = location.png; sourceTree = "<group>"; };
+		DB83681C27D1323D00BA3561 /* timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timer.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				DB83678F27CE8A3800BA3561 /* Remainder_Practice.xcdatamodeld */,
+				DB83681527D12FAC00BA3561 /* NotificationAttachmentID.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +156,9 @@
 		DB8367BD27CE8A6100BA3561 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DB83681A27D1323D00BA3561 /* Calendar.png */,
+				DB83681B27D1323D00BA3561 /* location.png */,
+				DB83681C27D1323D00BA3561 /* timer.png */,
 				DB83678C27CE8A3800BA3561 /* Main.storyboard */,
 				DB83679427CE8A3C00BA3561 /* LaunchScreen.storyboard */,
 				DB83679227CE8A3C00BA3561 /* Assets.xcassets */,
@@ -279,8 +291,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB83679627CE8A3C00BA3561 /* LaunchScreen.storyboard in Resources */,
+				DB83681D27D1323D00BA3561 /* Calendar.png in Resources */,
+				DB83681E27D1323D00BA3561 /* location.png in Resources */,
 				DB83679327CE8A3C00BA3561 /* Assets.xcassets in Resources */,
 				DB83678E27CE8A3800BA3561 /* Main.storyboard in Resources */,
+				DB83681F27D1323D00BA3561 /* timer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +320,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB83681627D12FAC00BA3561 /* NotificationAttachmentID.swift in Sources */,
 				DB8367CC27CE916500BA3561 /* UNService.swift in Sources */,
 				DB83679127CE8A3800BA3561 /* Remainder_Practice.xcdatamodeld in Sources */,
 				DB8367F927D118CE00BA3561 /* CLService.swift in Sources */,

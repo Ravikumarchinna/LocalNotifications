@@ -42,6 +42,11 @@ class UNService: NSObject {
         content.sound = .default
         content.badge = 1
         
+        if let attchment = getAttachment(for: .timer) {
+            content.attachments = [attchment]
+        }
+
+        
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: interval, repeats: false)
         let request  = UNNotificationRequest(identifier: "usernotificatin.timer",
                                              content: content,
@@ -57,15 +62,56 @@ class UNService: NSObject {
            content.sound = .default
            content.badge = 1
            
+        if let attchment = getAttachment(for: .date) {
+            content.attachments = [attchment]
+        }
+
            let trigger = UNCalendarNotificationTrigger(dateMatching: components, repeats: false)
            let request  = UNNotificationRequest(identifier: "usernotificatin.date",
                                                 content: content,
                                                 trigger: trigger)
            unCenter.add(request)
        }
+    
+    func locationRequest() {
+        let content = UNMutableNotificationContent()
+        content.title = "Location"
+        content.body = "Back same location"
+        content.sound = .default
+        content.badge = 1
+        
+        if let attchment = getAttachment(for: .location) {
+            content.attachments = [attchment]
+        }
+        
+        let request = UNNotificationRequest(identifier: "userNotification.location", content: content, trigger: nil)
+        unCenter.add(request)
+        
+    }
+    
+    func getAttachment(for id: NotificationAttachmentID) -> UNNotificationAttachment? {
+        
+        var imageName:String
+        
+        switch id {
+        case .timer:
+            imageName = "timer"
+        case .date:
+            imageName = "Calendar"
+        case .location:
+            imageName = "location"
+        }
+        
+        guard let url = Bundle.main.url(forResource: imageName, withExtension: ".png")
+        else { return nil}
+        do {
+          let attachment =  try UNNotificationAttachment(identifier: id.rawValue, url: url)
+            return attachment
+        } catch  {
+            return nil
+        }
+    }
 }
-
-
 
 extension UNService:UNUserNotificationCenterDelegate {
     
