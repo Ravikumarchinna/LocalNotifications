@@ -14,7 +14,14 @@ class ViewController: UIViewController {
 
         UNService.shared.authorize()
         CLService.shared.authorize()
+        
+        //... This is for location
         NotificationCenter.default.addObserver(self, selector: #selector(didEnterRegion), name: NSNotification.Name("internalNotification.enteredRegion"), object: nil)
+        
+        // "internalNotification.handler"
+        NotificationCenter.default.addObserver(self, selector: #selector(getallNotifications), name: NSNotification.Name("internalNotification.handler"), object: nil)
+
+        
     }
 
     @IBAction func onTimerTapped(){
@@ -41,12 +48,22 @@ class ViewController: UIViewController {
         }
     }
     
+    //... This is for
     @objc func didEnterRegion(){
         UNService.shared.locationRequest()
     }
     
+    //... Notifications Hanlde
+    @objc func getallNotifications(_ sender:NSNotification){
+        
+        guard let action = sender.object as? NotificatinActionsID else {return}
+        switch action {
+        case .timer: print("time logic")
+        case .date: print("date logic")
+        case .location: print("location logic")
+        }
+    }
 }
-
 
 
 

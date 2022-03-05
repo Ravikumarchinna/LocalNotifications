@@ -22,9 +22,6 @@ class AlertService {
             keyWindow.rootViewController?.present(alert, animated: true)
         }
     }
-    
-    
-    
 }
 extension UIWindow {
     static var key: UIWindow? {
